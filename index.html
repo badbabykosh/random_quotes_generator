@@ -27,16 +27,18 @@
       <div class="pull_left col-md-2 col-xs-1" id="right"></div>
     </div>
   </div>
-  
+
 </div>
 <script>
   $(document).ready(function(){
-    document.getElementById("quote").innerHTML = 'wait ten seconds to start:';
+    document.getElementById("quote").innerHTML = 'Click me:';
+    document.getElementById('quote').addEventListener('click',getQuote);
     var random = new RandomInit();
     function getQuote(){
       random.quote();
     }
-    setInterval( getQuote ,7000);
+    // uncomment to start random quotes per 7 secs
+    // setInterval( getQuote ,7000);
     random.randomBackground();
   });
 </script>
