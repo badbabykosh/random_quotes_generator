@@ -1,31 +1,41 @@
-<!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
-  <script src="js/lib/jquery/jquery-2.1.4.js"></script>
+  <title>Koshisms</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
   <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/style.css"/>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="js/src/Random.js"></script>
 </head>
 <body>
-<div id="stuff"></div>
+
+<div class="container">
+
+  <div class="container-fluid">
+    <div class="row spacer">
+      <div class="pull_left col-xs-2" id="left"></div>
+      <div class="pull_left col-xs-8" id="quote"></div>
+      <div class="pull_left col-xs-2" id="right"></div>
+    </div>
+  </div>
+</div>
 <script>
   $(document).ready(function(){
-    document.getElementById("stuff").innerHTML = 'wait ten seconds to start:';
+    document.getElementById("quote").innerHTML = 'wait ten seconds to start:';
     var random = new RandomInit();
     function getQuote(){
       random.quote();
     }
-    setInterval( getQuote ,10000);
-//    document.getElementById("stuff").innerHTML = result;
-//    console.log('result: '+ result);
-
+    setInterval( getQuote ,5000);
+    random.randomBackground();
   });
 </script>
 </body>

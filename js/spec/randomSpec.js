@@ -11,5 +11,10 @@ describe("Random",function(){
       // HOW TO TEST SUCCESS RESPONSE???
     })
   });
+  describe('randomBackground',function(){
+    it('should return a jpg',function(){
+
+    })
+  });
 
 });
