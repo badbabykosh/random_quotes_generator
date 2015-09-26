@@ -21,9 +21,9 @@
 
   <div class="container-fluid">
     <div class="row spacer">
-      <div class="pull_left col-xs-2" id="left"></div>
-      <div class="pull_left col-xs-8" id="quote"></div>
-      <div class="pull_left col-xs-2" id="right"></div>
+      <div class="pull_left col-md-2 col-xs-1" id="left"></div>
+      <div class="pull_left col-md-8 col-xs-10 panel" id="quote"></div>
+      <div class="pull_left col-md-2 col-xs-1" id="right"></div>
     </div>
   </div>
 </div>
@@ -34,7 +34,7 @@
     function getQuote(){
       random.quote();
     }
-    setInterval( getQuote ,5000);
+    setInterval( getQuote ,7000);
     random.randomBackground();
   });
 </script>
