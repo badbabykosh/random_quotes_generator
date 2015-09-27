@@ -2,14 +2,23 @@
 
 }
 
+#quoteholder{
+
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
 #quote{
   font-family: 'Architects Daughter', cursive;
   font-size: 3em;
   font-weight: bold;
   /*color:white;*/
-  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-  box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.no-gutter [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
 }
 
 .spacer{
@@ -41,6 +50,9 @@ body {
   background-color: #464646;
 }
 
+#tweetlink{
+
+}
 
 #sharing{
 

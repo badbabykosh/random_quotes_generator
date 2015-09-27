@@ -25,23 +25,25 @@
 <div class="container">
 
   <div class="container-fluid">
-    <div id="row">
-      <div id="clickme">
-        <button class="btn-primary">quote:</button>
-      </div>
-      <div id="sharing">
-        <button class="btn-primary">
-          <a id="tweetLink" href="#" target="_blank">tweet</a>
-        </button>
-      </div>
-    </div>
-    <div class="row spacer">
+
+    <div class="row spacer no-gutter">
       <div class="pull_left col-md-2 col-xs-1" id="left"></div>
 
-      <div class="pull_left col-md-8 col-xs-10 panel" id="quote"></div>
+      <div class="pull_left col-md-8 col-xs-10 panel" id="quoteholder">
+        <div id="row">
+          <div class="pull-left" id="clickme">
+            <button class="btn btn-primary">quote:</button>
+          </div>
+          <div id="quote"></div>
+          <div class='pull-right' id="sharing">
+            <a id="tweetLink" href="#" target="_blank" class="btn btn-primary">tweet</a>
+          </div>
+        </div>
+      </div>
 
       <div class="pull_left col-md-2 col-xs-1" id="right"></div>
     </div>
+
   </div>
 
 </div>
