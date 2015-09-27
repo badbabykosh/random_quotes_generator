@@ -3,44 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <title>Koshisms</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>-->
 
   <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-  <!-- Latest compiled and minified CSS -->
+
+  <!-- Bootstrap compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-  <!-- Latest compiled and minified JavaScript -->
+  <link rel="stylesheet" href="js/lib/bootstrap-335/css/bootstrap.min.css"/>
+  <!-- Bootstrap compiled and minified JavaScript -->
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+  <!--<script src="js/lib/bootstrap-335/js/bootstrap.js"></script>-->
+
   <link rel="stylesheet" href="css/style.css"/>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/style.css"/>
-  <script src="js/src/Random.js"></script>
+  <!--<script src="js/src/Random.js"></script>-->
+  <script data-main="js/lib/app" src="js/lib/require.js"></script>
+
 </head>
 <body>
 
 <div class="container">
 
   <div class="container-fluid">
+    <div id="row">
+      <div id="clickme">
+        <button class="btn-primary">quote:</button>
+      </div>
+      <div id="sharing">
+        <button class="btn-primary">
+          <a id="tweetLink" href="#" target="_blank">tweet</a>
+        </button>
+      </div>
+    </div>
     <div class="row spacer">
       <div class="pull_left col-md-2 col-xs-1" id="left"></div>
+
       <div class="pull_left col-md-8 col-xs-10 panel" id="quote"></div>
+
       <div class="pull_left col-md-2 col-xs-1" id="right"></div>
     </div>
   </div>
 
 </div>
-<script>
-  $(document).ready(function(){
-    document.getElementById("quote").innerHTML = 'Click me:';
-    document.getElementById('quote').addEventListener('click',getQuote);
-    var random = new RandomInit();
-    function getQuote(){
-      random.quote();
-    }
-    // uncomment to start random quotes per 7 secs
-    // setInterval( getQuote ,7000);
-    random.randomBackground();
-  });
-</script>
+
 </body>
+<!-- load html first...don't wait for js files to load-->
+
 </html>
