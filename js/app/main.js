@@ -2,8 +2,8 @@ define(['jquery','randomJs'],function($){
   // note the passing of the $ for jquery
   // note that randomJs makes it possible to call to src/Random.js
   $(document).ready(function(){
-    document.getElementById("quote").innerHTML = 'Click me: Start';
-    document.getElementById('quote').addEventListener('click',getQuote);
+    document.getElementById("quote").innerHTML = 'Welcome, click my quote button...';
+    document.getElementById('clickme').addEventListener('click',getQuote);
     var random = new RandomInit();
     function getQuote(){
       random.quote();
