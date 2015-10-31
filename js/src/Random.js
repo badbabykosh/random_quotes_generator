@@ -16,7 +16,7 @@ RandomInit.prototype.quote = function(){
           });
 
           b = array_of_content.length;
-          i = Math.floor(Math.random()*b)+1;
+          i = Math.floor(Math.random()*(b-1))+0;
           console.dir("array size "+b);
           console.dir("random "+i);
           console.dir(array_of_content[i]);
@@ -35,7 +35,7 @@ RandomInit.prototype.quote = function(){
 RandomInit.prototype.getComment = function(array){
   console.log(array instanceof Array);
   b = array.length;
-  ii = Math.floor(Math.random()*b)+0;
+  ii = Math.floor(Math.random()*(b-1))+0;
   console.dir("array2 size "+b);
   console.dir("random2 "+ii);
   console.dir(array);

@@ -1,5 +1,11 @@
 // AMD module pattern
 define(['jquery','randomJs'], function($){
+<<<<<<< HEAD
+=======
+  // NOTE the passing of the $ for jquery
+  // NOTE that randomJs makes it possible to call to src/Random.js
+  // via dependency injection
+>>>>>>> dev
 
   $(document).ready(function(){
     document.getElementById("quote").innerHTML = 'Welcome, click my quote button...';
