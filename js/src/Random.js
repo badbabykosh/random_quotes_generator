@@ -14,20 +14,12 @@ RandomInit.prototype.quote = function(){
     //$.getJSON("https://koshspeaks.herokuapp.com/api/v1/episodes.jsonp?callback=parseEpisodes")
         .done(function (json) {
 
-          //TODO this code should resemble forismatic....should only be json.getContent
-          //console.dir('json: '+json.episodes[0].quotes[0].content);
-          //TODO get total number of quotes to feed back to a randomizer
-          //TODO note: rand(a..b)
-          //iterate epsiodes then quotes in eps?
-          //console.dir(json.episodes.length);
-          //TODO for each episode funnel each quote into an array
-
           json.episodes.forEach(function(item){
             array_of_content.push(item.quotes);
           });
 
           b = array_of_content.length;
-          i = Math.floor(Math.random()*b)+1;
+          i = Math.floor(Math.random()*(b-1))+0;
           console.dir("array size "+b);
           console.dir("random "+i);
           console.dir(array_of_content[i]);
@@ -47,7 +39,7 @@ RandomInit.prototype.quote = function(){
 RandomInit.prototype.getComment = function(array){
   console.log(array instanceof Array);
   b = array.length;
-  ii = Math.floor(Math.random()*b)+0;
+  ii = Math.floor(Math.random()*(b-1))+0;
   console.dir("array2 size "+b);
   console.dir("random2 "+ii);
   console.dir(array);
