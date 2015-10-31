@@ -1,15 +1,21 @@
-define(['jquery','randomJs'],function($){
+// AMD module pattern
+define(['jquery','randomJs'], function($){
   // note the passing of the $ for jquery
   // note that randomJs makes it possible to call to src/Random.js
+  // via dependency injection
+
   $(document).ready(function(){
     document.getElementById("quote").innerHTML = 'Welcome, click my quote button...';
     document.getElementById('clickme').addEventListener('click',getQuote);
+
     var random = new RandomInit();
+
     function getQuote(){
       random.quote();
     }
     // uncomment to start random quotes per 7 secs
     // setInterval( getQuote ,7000);
+
     random.randomBackground();
 
 
