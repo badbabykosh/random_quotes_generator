@@ -46,10 +46,11 @@ RandomInit.prototype.getComment = function(array){
 RandomInit.prototype.randomBackground = function(){
   (function(){
     var images = [
-      //'http://i.imgur.com/n35hLd0.jpg',
+      'http://i.imgur.com/n35hLd0.jpg',
       'http://i.imgur.com/eNDW9ZV.jpg',
       'http://i.imgur.com/n0IY1gz.jpg'
     ];
+
     $('body').css({'background-image':'url('+images[Math.floor(Math.random()*images.length)]+')'});
   })();
 };

@@ -12,9 +12,8 @@ define(['jquery','randomJs'], function($){
     }
     // uncomment to start random quotes per 7 secs
     // setInterval( getQuote ,7000);
-
-    random.randomBackground();
-
+    //random.randomBackground();
+    setInterval(random.randomBackground ,6000);
 
     $('#tweetLink').click(function () {
 
