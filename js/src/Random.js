@@ -25,7 +25,6 @@ RandomInit.prototype.quote = function(){
           console.dir(array_of_content[i]);
           RandomInit.prototype.getComment(array_of_content[i]);
 
-          //TODO how to return value from here?
 
         })
         .fail(function(jqxhr,textStatus,error,json){
@@ -55,7 +54,6 @@ RandomInit.prototype.randomBackground = function(){
       'http://i.imgur.com/n0IY1gz.jpg'
     ];
     $('body').css({'background-image':'url('+images[Math.floor(Math.random()*images.length)]+')'});
-    //TODO return it
   })();
 };
 
